@@ -31,11 +31,12 @@
 ---
 
 ## 分析結果
-- **Google Slides**：👉 [[完整分析簡報](https://docs.google.com/presentation/d/1cl_TZVyfhlj-Ut31VTxw9Y7f8IICuv0aMs7t54P8LvI/edit?usp=drive_link)]
-- **Google Sheets**：👉 [[數據計算與視覺化圖表](https://docs.google.com/spreadsheets/d/1b7DfXcB7rkAvMXH_Hq9_lMV4ofwjJRFBLX0awKbqnas/edit?usp=drive_link)]
+- **Google Slides**：[完整分析簡報](https://docs.google.com/presentation/d/1cl_TZVyfhlj-Ut31VTxw9Y7f8IICuv0aMs7t54P8LvI/edit?usp=drive_link)
+- **Google Sheets**：[數據計算與視覺化圖表](https://docs.google.com/spreadsheets/d/1b7DfXcB7rkAvMXH_Hq9_lMV4ofwjJRFBLX0awKbqnas/edit?usp=drive_link)
 
 ## SQL Scripts
-- 
+- [RFM 分群](https://github.com/yishin9595/Brazilian-E-Commerce-Olist-Growth-Strategy-Analysis/blob/3d97c27502eb68246c466048ff04b8ca26ef5a58/RFM%20%E5%88%86%E7%BE%A4.sql)
+- [賣家產業營收、訂單、AOV](https://github.com/yishin9595/Brazilian-E-Commerce-Olist-Growth-Strategy-Analysis/blob/3d97c27502eb68246c466048ff04b8ca26ef5a58/%E8%B3%A3%E5%AE%B6%E7%94%A2%E6%A5%AD%E7%87%9F%E6%94%B6%E3%80%81%E8%A8%82%E5%96%AE%E3%80%81AOV.sql)
 
 ## 技能展現
 - SQL、BigQuery、Google Sheets 視覺化
