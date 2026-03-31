@@ -23,7 +23,7 @@
 ### 分析結果
 *   **Google Slide 簡報**：[完整分析簡報](https://docs.google.com/presentation/d/1cl_TZVyfhlj-Ut31VTxw9Y7f8IICuv0aMs7t54P8LvI/edit?usp=drive_link)
 *   **SQL Scripts**：
-- [RFM 分群](sql%20script/RFM%20分群.sql)
-- [回購天數分析](sql%20script/回購天數分析.sql)
-- [產品回購率](sql%20script/產品回購率.sql)
-- [顧客滿意度＆運送延遲分析](sql%20script/顧客滿意度＆運送延遲分析.sql)
+    - [RFM 分群](sql%20script/RFM%20分群.sql)
+    - [回購天數分析](sql%20script/回購天數分析.sql)
+    - [產品回購率](sql%20script/產品回購率.sql)
+    - [顧客滿意度＆運送延遲分析](sql%20script/顧客滿意度＆運送延遲分析.sql)
