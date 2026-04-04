@@ -2,7 +2,7 @@ with order_payment as (
   select
     order_id,
     sum(payment_value) as order_value
-  from `lisa-project-383407.2025_profile.olist_order_payments_dataset`
+  from `project_name.2025_profile.olist_order_payments_dataset`
   group by order_id
 ),
 
@@ -10,7 +10,7 @@ with order_payment as (
 max_date as (
   select
     date(max(order_approved_at)) as max_dt
-  from `lisa-project-383407.2025_profile.olist_orders_dataset`
+  from `project_name.2025_profile.olist_orders_dataset`
   where order_status not in ('canceled','unavailable')
     and order_approved_at is not null
 ),
@@ -24,8 +24,8 @@ rfm_base as (
     count(distinct od.order_id) as frequency_count,
     -- Monetary
     round(sum(op.order_value), 2) as monetary_value
-  from `lisa-project-383407.2025_profile.olist_orders_dataset` as od
-  join `lisa-project-383407.2025_profile.olist_customers_dataset` as cd
+  from `project_name.2025_profile.olist_orders_dataset` as od
+  join `project_name.2025_profile.olist_customers_dataset` as cd
     on od.customer_id = cd.customer_id
   join order_payment as op
     on od.order_id = op.order_id
