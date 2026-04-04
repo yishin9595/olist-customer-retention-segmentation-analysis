@@ -3,12 +3,12 @@ with base as (
     c.customer_unique_id,
     p.product_category_name,
     o.order_id
-  from `lisa-project-383407.2025_profile.olist_orders_dataset` as  o
-  join `lisa-project-383407.2025_profile.olist_customers_dataset` as c
+  from `project_name.2025_profile.olist_orders_dataset` as  o
+  join `project_name.2025_profile.olist_customers_dataset` as c
     on o.customer_id = c.customer_id
-  join `lisa-project-383407.2025_profile.olist_order_items_dataset` as oi
+  join `project_name.2025_profile.olist_order_items_dataset` as oi
     on o.order_id = oi.order_id
-  join `lisa-project-383407.2025_profile.olist_products_dataset` as p
+  join `project_name.2025_profile.olist_products_dataset` as p
     on oi.product_id = p.product_id
   where o.order_status not in ('canceled','unavailable')
 ),
