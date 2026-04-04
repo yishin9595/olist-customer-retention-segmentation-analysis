@@ -12,7 +12,7 @@
 
 ### 研究工具
 *   **BigQuery**：進行 SQL 資料查詢
-*   **Google Sheets、Excel**：將分析結果視覺化
+*   **Google Sheets、Tableau**：將分析結果視覺化
 *   **Google Slides**：整合數據洞察，製作分析簡報，提出具體的行銷建議方案
 
 ### 主要發現
@@ -35,6 +35,7 @@
 
 ### 分析結果
 *   **Google Slide 簡報**：[完整分析簡報](https://docs.google.com/presentation/d/1cl_TZVyfhlj-Ut31VTxw9Y7f8IICuv0aMs7t54P8LvI/edit?usp=drive_link)
+*   **Tableau**：[Dashboard](https://public.tableau.com/views/dashboard_Brazilian-E-Commerce-Olist-Growth-Strategy-Analysis/1?:language=zh-TW&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 *   **SQL Scripts**：
     - [RFM 分群](sql%20script/RFM%20分群.sql)
     - [回購天數分析](sql%20script/回購天數分析.sql)
