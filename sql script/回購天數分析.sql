@@ -7,8 +7,8 @@ with order_sequence as (
     row_number() over(partition by cd.customer_unique_id order by od.order_approved_at asc) as order_seq,
     -- 取得「前一筆」訂單的時間
     lag(od.order_approved_at) over(partition by cd.customer_unique_id order by od.order_approved_at asc) as prev_order_at
-  from `lisa-project-383407.2025_profile.olist_orders_dataset` as od
-  join `lisa-project-383407.2025_profile.olist_customers_dataset` as cd 
+  from `project_name.2025_profile.olist_orders_dataset` as od
+  join `project_name.2025_profile.olist_customers_dataset` as cd 
     on od.customer_id = cd.customer_id
   where od.order_status not in ('canceled','unavailable')
     and od.order_approved_at is not null
