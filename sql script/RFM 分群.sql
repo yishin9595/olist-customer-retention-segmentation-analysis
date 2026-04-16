@@ -39,31 +39,29 @@ rfm_base as (
 rfm_score as (
   select
     *,
-    -- R Score: 天數愈小越高分
-    ntile(5) over (order by recency_days asc, customer_unique_id asc) as r_score,
-    -- F Score
-    case 
-      when frequency_count = 1 then 1
-      when frequency_count = 2 then 3
-      when frequency_count >= 3 then 5
-      else 1 
-    end as f_score,
-    -- M Score
-    ntile(5) over (order by monetary_value asc, customer_unique_id asc) as m_score
+    -- R：越近越高
+    ntile(5) over (order by recency_days desc) as r_score,
+
+    -- F：越多越高
+    ntile(5) over (order by frequency_count asc) as f_score,
+
+    -- M：越高越高
+    ntile(5) over (order by monetary_value asc) as m_score
+
   from rfm_base
 ),
 
 rfm_segment as (
   select
     *,
-    concat(cast(r_score as string), cast(f_score as string), cast(m_score as string)) as rfm_code,
+    concat(r_score, f_score, m_score) as rfm_code,
     case
-      when r_score >= 4 and f_score >= 3 then '重要價值客'
-      when r_score >= 4 and f_score = 1 then '新客'
-      when r_score <= 2 and (f_score >= 3 or m_score >= 4) then '高價值流失客'
-      when r_score <= 2 and f_score = 1 then '已流失客戶'
-      when r_score = 3 then '一般客戶'
-      else '其他/沈睡中'
+      when r_score >= 4 and f_score >= 4 and m_score >= 4 then 'VIP'
+      when r_score >= 4 and f_score >= 3 then 'Loyal Customers'
+      when r_score >= 4 and f_score <= 2 then 'New Customers'
+      when r_score <= 2 and (f_score >= 4 or m_score >= 4) then 'At Risk'
+      when r_score <= 2 and f_score <= 2 then 'Churned'
+      else 'Others'
     end as customer_segment
   from rfm_score
 )
