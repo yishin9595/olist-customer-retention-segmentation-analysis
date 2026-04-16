@@ -17,12 +17,13 @@
 
 ### 主要發現
 
-**RFM 分析**
-- 首購後 **30 天**為回購關鍵期，**50.8%** 的回購發生在此期間；隨著購買頻率上升，購買金額也會提高
-- 針對新客：建議在第 20–25 天發放免運券，攔截潛在流失並提升轉換率
-- 針對重要價值客：以關聯商品推薦穩定經營
-- 針對高價值流失客：以「痛點已解決 EDM」搭配限時回購券喚回
-- 針對低價值流失客：建議停止投入預算
+**RFM、用戶二購天數分析**
+- 透過用戶二購天數分析，首購後 1–3 天回購比例最高，主要來自自然轉換
+- 7–14 天仍有一段穩定的回購發生，顯示部分用戶於此期間完成購買決策，由於該區間仍存在尚未轉換的潛在用戶，適合作為再行銷介入的優化窗口，以驗證是否能進一步提升回購轉換
+- 透過 RFM 分群後觀察：
+    - 建議可針對 VIP 客戶（R>=4,F>=4），以關聯商品推薦穩定經營
+    - 針對曾經常購買但很久沒購買的流失客(R=1,F>=3)，可能已轉向競爭對手或對產品滿意下降，建議可以先發調查問券了解真實流失原因，並針對原因做改善
+    - 針對一次性購買者 (F=1,R=1,M=1)，則建議停止投入預算
 
 **顧客滿意度分析**
 - 運送延遲率與顧客滿意度呈負相關，延遲率越高，顧客評分越低
@@ -34,7 +35,7 @@
 - cool stuff、electronics、console games 回購率偏低，消費屬性偏向衝動型或耐用品，建議適度調整預算配置，將資源轉向高回購潛力類別
 
 ### 分析結果
-*   **Google Slide 簡報**：[完整分析簡報](https://docs.google.com/presentation/d/1cl_TZVyfhlj-Ut31VTxw9Y7f8IICuv0aMs7t54P8LvI/edit?usp=drive_link)
+*   **Google Slide 簡報**：[完整分析簡報](https://lihi1.me/QMzsI)
 *   **Tableau**：[Dashboard](https://public.tableau.com/views/dashboard_Brazilian-E-Commerce-Olist-Growth-Strategy-Analysis/1?:language=zh-TW&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 *   **SQL Scripts**：
     - [RFM 分群](sql%20script/RFM%20分群.sql)
