@@ -21,4 +21,6 @@ select
   date_diff(date(order_approved_at), date(prev_order_at), day) as days_between_1st_2nd
 from order_sequence
 where order_seq = 2
+  and date_diff(date(order_approved_at), date(prev_order_at), day) >= 1
+  and date_diff(date(order_approved_at), date(prev_order_at), day) <= 60
 order by days_between_1st_2nd desc;
