@@ -18,4 +18,4 @@ select
   round(countif(order_cnt >= 2) *100.0 / count(*) ,2 ) as purchased_1_to_2_rate,
   round(countif(order_cnt >= 3) *100.0 / countif(order_cnt >= 2) ,2 ) as purchased_2_to_3_rate,
   round(countif(order_cnt >= 4) *100.0 / countif(order_cnt >= 3) ,2 ) as purchased_3_to_4_rate
-from customer_frequency
+from customer_frequency;
