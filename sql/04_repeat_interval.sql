@@ -39,4 +39,4 @@ select
   round(count(*) *100.0 / sum(count(*)) over() ,2 ) as customer_pct
 from repeat_interval
 group by repeat_interval_day
-order by min(days_to_second_order)
+order by min(days_to_second_order);
