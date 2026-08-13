@@ -35,4 +35,4 @@ from customer_repeat
 cross join max_date
 where first_order_date <= date_sub(max_date.max_date , interval 90 day) -- 篩去沒有 90 天以上觀察期的資料
 group by date_trunc(first_order_date, month)
-order by first_order_month asc
+order by first_order_month asc;
